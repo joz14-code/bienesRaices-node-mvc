@@ -1,0 +1,50 @@
+{
+  "name": "bienes-raices_mvc",
+  "version": "1.0.0",
+  "description": "Mi Primer Proyecto de Node.js",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "css": "postcss public/css/tailwind.css -o public/css/app.css --watch",
+    "js": "webpack --watch",
+    "dev": "concurrently \"npm run css\" \"npm run js\"",
+    "db:importar": "node ./seed/seeder.js -i",
+    "db:eliminar": "node ./seed/seeder.js -e"
+  },
+  "keywords": [
+    "MVC",
+    "Pug",
+    "MySQL",
+    "Tailwind",
+    "Sequelize"
+  ],
+  "author": "Juliana",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cookie-parser": "^1.4.7",
+    "csurf": "^1.2.2",
+    "dotenv": "^17.0.1",
+    "dropzone": "^5.9.3",
+    "express": "^5.1.0",
+    "express-validator": "^7.2.1",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^2.0.2",
+    "mysql2": "^3.9.7",
+    "nodemailer": "^7.0.5",
+    "pug": "^3.0.3",
+    "sequelize": "^6.37.7"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "concurrently": "^9.2.0",
+    "nodemon": "^3.1.10",
+    "postcss": "^8.5.6",
+    "postcss-cli": "^11.0.1",
+    "tailwindcss": "^3.4.17",
+    "webpack": "^5.100.1",
+    "webpack-cli": "^6.0.1"
+  }
+}

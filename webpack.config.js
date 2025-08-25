@@ -1,0 +1,19 @@
+// webpack --> toma los archivos de javascript  y los compila en archivos estáticos
+import path from 'path'
+import { agregarImagen } from './controllers/propiedadController.js'
+
+export default {
+    mode: 'development',
+    entry: {
+        mapa: './src/js/mapa.js',
+        agregarImagen: './src/js/agregarImagen.js',
+        mostrarMapa: './src/js/mostrarMapa.js',
+        mapaInicio: './src/js/mapaInicio.js',
+        cambiarEstado: './src/js/cambiarEstado.js'
+    },
+    output: {
+
+        filename: '[name].js',
+        path: path.resolve('public/js')
+    }
+}
